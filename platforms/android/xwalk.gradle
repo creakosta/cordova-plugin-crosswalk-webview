@@ -160,6 +160,11 @@ cdvPluginPostBuildExtras.add({
     dependencies {
         compile xwalkSpec
     }
+    
+    // ADDED THESE LINES
+configurations.all {
+resolutionStrategy.force 'com.android.support:support-v4:26+'
+}`
 
     if (file('assets/xwalk-command-line').exists()) {
         println('Not writing assets/xwalk-command-line since file already exists.')
